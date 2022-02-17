@@ -21,8 +21,7 @@
     "job": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::job.job",
-      "inversedBy": "roles"
+      "target": "api::job.job"
     },
     "Images": {
       "type": "media",

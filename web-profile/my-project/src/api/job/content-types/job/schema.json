@@ -12,19 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Frontend",
-        "Backend",
-        "Leader"
-      ]
-    },
-    "roles": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::member.member",
-      "mappedBy": "job"
+    "jobname": {
+      "type": "string"
     }
   }
 }
