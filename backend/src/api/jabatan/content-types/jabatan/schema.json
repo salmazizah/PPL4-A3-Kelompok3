@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jabatans",
+  "info": {
+    "singularName": "jabatan",
+    "pluralName": "jabatans",
+    "displayName": "Jabatan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "uid"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "jabatan"
+    }
+  }
+}

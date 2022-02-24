@@ -4,7 +4,8 @@
   "info": {
     "singularName": "mahasiswa",
     "pluralName": "mahasiswas",
-    "displayName": "Mahasiswa"
+    "displayName": "Mahasiswa",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,9 @@
       "type": "uid"
     },
     "nama": {
+      "type": "string"
+    },
+    "role": {
       "type": "string"
     }
   }

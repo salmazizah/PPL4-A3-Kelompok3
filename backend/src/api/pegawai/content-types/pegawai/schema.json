@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pegawais",
+  "info": {
+    "singularName": "pegawai",
+    "pluralName": "pegawais",
+    "displayName": "Pegawai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "religion": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "tampatLahir": {
+      "type": "string"
+    },
+    "tanggalLahir": {
+      "type": "date"
+    },
+    "noHp": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "nip": {
+      "type": "uid"
+    },
+    "pendidikan": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::grade.grade"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::jenjang.jenjang"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "pegawais"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::jabatan.jabatan"
+    }
+  }
+}
