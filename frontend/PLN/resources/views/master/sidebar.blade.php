@@ -7,15 +7,15 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{route('getDashboard')}}" class="nav-link {{request()->is('dashboard') ? 'active' : ''}}">
+                    <a href="{{route('getDashboard')}}" class="nav-link {{request()->is('dashboard', '/') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                     </a>
                 </li>
-                <li class="nav-item {{request()->is('master/dataPeserta', 'master/dataPenguji') ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{request()->is('master/dataPeserta', 'master/dataPenguji') ? 'active' : ''}}">
+                <li class="nav-item {{request()->is('master/dataPeserta', 'master/dataPenguji', 'master/dataPeserta/add') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{request()->is('master/dataPeserta', 'master/dataPenguji', 'master/dataPeserta/add') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Master
@@ -24,7 +24,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('getPeserta')}}" class="nav-link {{request()->is('master/dataPeserta') ? 'active' : ''}}">
+                            <a href="{{route('getPeserta')}}" class="nav-link {{request()->is('master/dataPeserta', 'master/dataPeserta/add') ? 'active' : ''}}">
                                 <p>Data Peserta</p>
                             </a>
                         </li>

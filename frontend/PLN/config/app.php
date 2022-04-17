@@ -174,6 +174,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Yoeunes\Toastr\ToastrServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
+        Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
 
     ],
 
@@ -226,7 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
     ],
 
 ];
