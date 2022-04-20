@@ -31,3 +31,10 @@ Route::group(['prefix' => 'master'], function () {
     Route::post('dataPenguji/updateData', 'Master\DataPengujiController@updateData')->name('dataPenguji.updateData');
     Route::get('dataPenguji/delete/{id}', 'Master\DataPengujiController@delete')->name('dataPenguji.delete');
 });
+
+Route::group(['prefix' => 'fit-proper'], function () {
+    Route::get('pendaftaran', 'FitProper\FitProperController@pendaftaran')->name('fitProper.pendaftaran');
+    Route::get('pendaftaran/getPegawaiById/{id}', 'FitProper\FitProperController@getPegawaiById')->name('fitProper.getPegawaiById');
+    Route::get('pencarian', 'FitProper\FitProperController@pencarian')->name('fitProper.pencarian');
+    Route::get('pencarian/pencarianById/{id}', 'FitProper\FitProperController@pencarianById')->name('fitProper.pencarianById');
+});

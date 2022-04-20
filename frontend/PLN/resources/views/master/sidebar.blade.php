@@ -35,8 +35,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item {{request()->is('fit-proper/pendaftaran') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{request()->is('fit-proper/pendaftaran') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-desktop"></i>
                         <p>
                             Fit & Proper
@@ -45,7 +45,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('fitProper.pendaftaran')}}" class="nav-link {{request()->is('fit-proper/pendaftaran') ? 'active' : ''}}">
                                 <p>Pendaftaran Fit & Proper</p>
                             </a>
                         </li>
@@ -103,7 +103,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('fitProper.pencarian')}}" class="nav-link {{request()->is('fit-proper/pencarian') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-search"></i>
                         <p>
                             Pencarian Fit Proper
