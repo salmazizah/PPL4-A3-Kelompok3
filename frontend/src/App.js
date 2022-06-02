@@ -43,10 +43,18 @@ function App() {
 								<Route path='/master/dataPenguji/add' element={<AddPenguji />} />
 								<Route path='/master/dataPeserta/add' element={<AddPeserta />} />
 
-								{/* Oky */}
+								
 								<Route path='/fit-proper/pendaftaran' element={<PendaftaranFit />} />
 								<Route path='/fit-proper/penilaian' element={<PenilaianFit />} />
 								<Route path='/fit-proper/pencarian' element={<Pencarian />} />
+									
+									
+								<Route path='/fit-proper/wawancara/pendaftaran' element={<PendaftaranWawancara />} />
+								<Route path='/fit-proper/wawancara/penilaian' element={<PenilaianWawancara />} />
+
+								<Route path='/report/rekap-nilai' element={<RekapNilai />} />
+								<Route path='/report/rekap-nilai/:id' element={<Nilai />} />
+								<Route path='/report/cetak-nilai/:id' element={<Cetak />} />
 							</Routes>
 						</div>
 					</div>
