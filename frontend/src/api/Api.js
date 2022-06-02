@@ -39,7 +39,7 @@ export default {
             }
         }),
 
-    //Oky
+    
     getJabatan: () => axios.get(base_url + 'jabatans?populate=*'),
     getPenguji: () => axios.get(base_url + 'pengujis?populate=*'),
     getPengujiById: (id) => axios.get(base_url + 'pengujis/?populate=*'),
@@ -93,4 +93,21 @@ export default {
     getNilaiKc: () => axios.get(base_url + 'key-competencies?populate=*'),
     getNilaiPe: () => axios.get(base_url + 'personal-endurances?populate=*'),
     getNilaiPj: () => axios.get(base_url + 'proyeksi-jabatans?populate=*'),
+    
+    
+     addWawancara: (data) =>
+        axios.post(base_url + 'wawancaras', {
+            data: {
+                tanggalWawancara: data.tanggalWawancara,
+                fit_proper: data.fitProper.value,
+                pewawancara: data.penguji.value
+            }
+        }),
+    getWawancara: () => axios.get(base_url + 'wawancaras?populate=*'),
+    getWawancaraById: (id) => axios.get(base_url + 'wawancaras/' + id + '?populate=*'),
+    nilaiWawancara: (data) => axios.put(base_url + 'wawancaras/' + data.idWawancara.value, {
+        data: {
+            nilaiWawancara: data.nilai
+        }
+    }),
 }
