@@ -1,6 +1,6 @@
 # Aplikasi PLN Successor
 ## Kelompok A3
-Ketua : Adrianus Sinarmata
+Ketua : Adrianus Simarmata (201511002)
 
 Anggota : 
 1. Athirah Naurah (201511004)
