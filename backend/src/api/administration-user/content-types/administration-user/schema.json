@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "administration_users",
+  "info": {
+    "singularName": "administration-user",
+    "pluralName": "administration-users",
+    "displayName": "Administration_user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "password": {
+      "type": "password"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "id_user"
+    }
+  }
+}

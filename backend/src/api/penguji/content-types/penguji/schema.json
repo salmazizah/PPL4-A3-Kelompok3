@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pengujis",
+  "info": {
+    "singularName": "penguji",
+    "pluralName": "pengujis",
+    "displayName": "Penguji",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_fit_propers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fit-proper.fit-proper",
+      "inversedBy": "pengujis"
+    },
+    "id_penguji": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pegawai.pegawai",
+      "inversedBy": "pengujis"
+    },
+    "id_kc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::key-competency.key-competency",
+      "mappedBy": "penguji"
+    },
+    "id_pe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::personal-endurance.personal-endurance",
+      "inversedBy": "penguji"
+    },
+    "id_pj": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::proyeksi-jabatan.proyeksi-jabatan",
+      "inversedBy": "penguji"
+    },
+    "mewawancara": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::wawancara.wawancara",
+      "mappedBy": "pewawancara"
+    }
+  }
+}

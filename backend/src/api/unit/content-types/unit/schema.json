@@ -12,8 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "nama": {
-      "type": "uid"
+    "namaUnit": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "unique": true
     },
     "pegawais": {
       "type": "relation",
@@ -21,11 +24,16 @@
       "target": "api::pegawai.pegawai",
       "mappedBy": "unit"
     },
+    "jabatans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "units"
+    },
     "direktorats": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::direktorat.direktorat",
-      "mappedBy": "unit"
+      "target": "api::direktorat.direktorat"
     }
   }
 }

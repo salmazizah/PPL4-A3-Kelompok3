@@ -12,20 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "nama": {
-      "type": "uid"
+    "namaDirektorat": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "unique": true
     },
-    "unit": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::unit.unit",
-      "inversedBy": "direktorats"
-    },
-    "divisi": {
+    "divises": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::divisi.divisi",
-      "mappedBy": "direktorat"
+      "target": "api::divisi.divisi"
     }
   }
 }

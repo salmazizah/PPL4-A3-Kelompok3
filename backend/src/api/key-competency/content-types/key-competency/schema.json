@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_competencies",
+  "info": {
+    "singularName": "key-competency",
+    "pluralName": "key-competencies",
+    "displayName": "Key_Competency",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enthusiasthic": {
+      "type": "integer"
+    },
+    "creative": {
+      "type": "integer"
+    },
+    "partnership": {
+      "type": "integer"
+    },
+    "bsn_acumen": {
+      "type": "integer"
+    },
+    "cust_focus": {
+      "type": "integer"
+    },
+    "empowering": {
+      "type": "integer"
+    },
+    "nilai_kc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fit-proper.fit-proper"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::penguji.penguji",
+      "inversedBy": "id_kc"
+    },
+    "driving_execution": {
+      "type": "integer"
+    }
+  }
+}

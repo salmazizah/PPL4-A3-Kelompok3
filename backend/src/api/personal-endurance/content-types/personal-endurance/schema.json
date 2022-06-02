@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_endurances",
+  "info": {
+    "singularName": "personal-endurance",
+    "pluralName": "personal-endurances",
+    "displayName": "Personal_Endurance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "internal": {
+      "type": "integer"
+    },
+    "external": {
+      "type": "integer"
+    },
+    "nilai_pe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fit-proper.fit-proper"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::penguji.penguji",
+      "mappedBy": "id_pe"
+    }
+  }
+}

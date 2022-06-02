@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyeksi_jabatans",
+  "info": {
+    "singularName": "proyeksi-jabatan",
+    "pluralName": "proyeksi-jabatans",
+    "displayName": "Proyeksi_Jabatan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pemasaran": {
+      "type": "integer"
+    },
+    "keteknisan": {
+      "type": "integer"
+    },
+    "k3l": {
+      "type": "integer"
+    },
+    "kontribusi_kpi": {
+      "type": "integer"
+    },
+    "nilai_pj": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fit-proper.fit-proper"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::penguji.penguji",
+      "mappedBy": "id_pj"
+    }
+  }
+}

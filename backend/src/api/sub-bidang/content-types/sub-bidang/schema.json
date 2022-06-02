@@ -11,14 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "nama": {
-      "type": "uid"
-    },
-    "bidang": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::bidang.bidang",
-      "inversedBy": "subBidang"
+    "namaSubBidang": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
     }
   }
 }

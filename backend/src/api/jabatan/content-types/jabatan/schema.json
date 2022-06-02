@@ -4,21 +4,30 @@
   "info": {
     "singularName": "jabatan",
     "pluralName": "jabatans",
-    "displayName": "Jabatan"
+    "displayName": "Jabatan",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "nama": {
-      "type": "uid"
+    "namaJabatan": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
     },
-    "jenjang": {
+    "pegawais": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::jenjang.jenjang",
-      "inversedBy": "jabatan"
+      "relation": "oneToMany",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "jabatan"
+    },
+    "units": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::unit.unit",
+      "mappedBy": "jabatans"
     }
   }
 }

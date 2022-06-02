@@ -1,0 +1,21 @@
+{
+    "kind": "collectionType",
+    "collectionName": "bobot_nilai",
+    "info": {
+      "singularName": "bobot-nilai",
+      "pluralName": "bobot-nilais",
+      "displayName": "Bobot_nilai"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+      "namaBobot": {
+        "type": "string"
+      },
+      "bobot": {
+          "type": "float"
+      }
+    }
+  }
