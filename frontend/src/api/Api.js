@@ -2,6 +2,43 @@ import axios from 'axios';
 var base_url = 'https://linksmart-pln.herokuapp.com/api/';
 export default {
 
+    getDataPegawai: () =>
+        axios({
+            'method': 'GET',
+            'url': base_url + 'pegawais?populate=jabatan'
+        }),
+    getDataPegawaiById: (id) =>
+        axios({
+            'method': 'GET',
+            'url': base_url + 'pegawais/' + id + '?populate=jabatan'
+        }),
+    updateRolePenguji: (id) =>
+        axios.put(base_url + 'pegawais/' + id, {
+            data: {
+                role: 'Penguji'
+            }
+        }),
+    updateRolePeserta: (id) =>
+        axios.put(base_url + 'pegawais/' + id, {
+            data: {
+                role: 'Peserta'
+            }
+        }),
+
+    deletePegawai: (id) =>
+        axios.put(base_url + 'pegawais/' + id, {
+            data: {
+                role: 'None'
+            }
+        }),
+
+    addPenguji: (id) =>
+        axios.post(base_url + 'pengujis', {
+            data: {
+                id_penguji: id
+            }
+        }),
+
     //Oky
     getJabatan: () => axios.get(base_url + 'jabatans?populate=*'),
     getPenguji: () => axios.get(base_url + 'pengujis?populate=*'),

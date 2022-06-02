@@ -36,6 +36,13 @@ function App() {
 								<Route path='/' element={<Dashboard />} />
 								<Route path='/dashboard' element={<Dashboard />} />
 
+								<Route path='/master/dataPeserta' element={<DataPeserta />} />
+								<Route path='/master/dataPeserta/edit/:id' element={<EditPeserta />} />
+
+								<Route path='/master/dataPenguji' element={<DataPenguji />} />
+								<Route path='/master/dataPenguji/add' element={<AddPenguji />} />
+								<Route path='/master/dataPeserta/add' element={<AddPeserta />} />
+
 								{/* Oky */}
 								<Route path='/fit-proper/pendaftaran' element={<PendaftaranFit />} />
 								<Route path='/fit-proper/penilaian' element={<PenilaianFit />} />
