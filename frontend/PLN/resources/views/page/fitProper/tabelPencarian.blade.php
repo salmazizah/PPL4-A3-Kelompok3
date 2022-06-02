@@ -1,1 +1,0 @@
-<div class="col-sm-12"><div class="card"><div class="card-body"><div class="table-responsive"><table class="table table-striped table-bordered" id="dttable""><thead><tr><th>No</th><th>Nama</th><th>NIP</th><th>Jabatan</th><th>Grade</th><th>Jenjang</th><th>Role</th><th>Aksi</th></tr></thead><tbody></tbody></table></div></div></div></div>
